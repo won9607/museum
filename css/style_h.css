@@ -1,0 +1,226 @@
+/*section books*/
+
+/* 서진 스타일에 있는거 옮겼어요 */
+.books {position:relative; top:0; opacity:1;}
+.books .inner {padding-bottom:100px;}
+
+/*book swiper*/
+.book-swiper-wrap {
+    position:relative;
+}
+.book-swiper {
+    width: 100%;
+    height: 100%;
+    position:static;
+}
+.book-swiper .swiper-wrapper {
+    align-items: center;
+}
+.book-swiper .swiper-slide {
+    max-height: 748px;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+.book_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    max-height: 748px;
+      
+}
+.book_img img{
+    width: 60%;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .3);
+}
+/* 책 스와이퍼 prev, next, page */
+.swiper-button-prev.book_prev::after,
+.swiper-button-next.book_next::after {display:none;}
+.swiper-button-prev.book_prev {width:25px; height:44px; background: url('../img/arrow-prev.png') no-repeat; z-index:1;}
+.swiper-button-next.book_next {width:25px; height:44px; background: url('../img/arrow-next.png') no-repeat; z-index:1;}
+.book-swiper .swiper-pagination-bullets {bottom:-30px; z-index:1;}
+.book-swiper .swiper-pagination-bullet {width:10px; height:10px; background:#000;}
+.book-swiper .swiper-pagination-bullet-active {background:#000;}
+
+/*section contest*/
+.contest .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+.contest .content::before {content:""; display:block; width:100vw; height:290px; background-color: #fff; position: absolute; left:50%; top:50%; transform: translate(-50%, -50%); z-index:0; box-shadow:0 3px 15px rgba(0,0,0,.05);}
+.poster{
+    width: 25%;
+    padding:5px;
+    background-color: #fff;
+    position: relative;
+    z-index:1;
+}
+.poster img{
+    width: 100%;
+}
+
+.info_txt{
+    text-align: left;
+    font-size: 15px;
+    position: relative;
+}
+.info_txt h3{
+    font-size: 28px;
+    padding-bottom: 17px;
+    letter-spacing: -0.07em;
+}
+.info_txt li dl{
+    display: flex;
+}
+.info_txt li dl dt {width: 70px; font-size:15px; line-height:1.6; font-weight:600;}
+.info_txt li dl dd {width:calc(100% - 70px); font-size:15px; line-height:1.6;}
+
+.contest .info_txt {padding-left:30px;}
+.contest .info_txt .view_btn {display:none; float:right; margin-top:60px; width:180px; padding:15px 20px; border:1px solid #ccc; text-align:center; color:#999; transition:.3s;}
+.contest .info_txt .view_btn:hover,
+.contest .info_txt .view_btn.active {color:#000; background-color: rgba(255,255,255,0.8);}
+
+.books .info_txt{
+    width: 40%;
+    text-align: left;
+}
+.books .info_txt li p{
+    padding-top: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight:600;
+}
+.books .info_txt li p span{
+    display: block;
+    padding-top: 15px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* contest_art */
+.contest_art {position: relative;}
+.contest_art::before {content:""; display:block; width:100vw; height:95px; background-color:#fff; position:absolute; left:50%; top:-15px; transform:translateX(-50%); z-index:0; box-shadow: 0 3px 15px rgba(0, 0, 0, .05);}
+.contest_art h4 {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 400;
+  position: relative; z-index:1;
+}
+
+.art_category {
+  display: flex;
+  padding: 5px 0 23px;
+  text-align: center;
+  justify-content: center;
+  position: relative; z-index:1;
+}
+
+.art_category li {
+  cursor: pointer;
+  margin:0 7px;
+  padding: 10px 3px 5px;
+}
+
+.art_category li.on{
+  border-bottom:2px solid #000;
+}
+
+.art_category li:nth-child(2){
+  border-left: none;
+}
+
+.art_category li:nth-child(3){
+  border-left: none;
+}
+
+.art_category li:nth-child(4){
+  border-left: none;
+}
+
+.grid {
+  max-width: 100%;
+  margin: auto;
+}
+
+.grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.grid-item {
+  width: 130px;
+  font-size: 0;
+  float: left;
+}
+
+.grid-item img {
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.art_box{
+  padding: 5px;
+}
+
+/* section world art */
+.worldArt-container{
+    overflow: hidden;
+}
+
+.worldArt_slide_box{
+    height: 355px;
+    display: flex;
+}
+
+.worldArt_slide_box .worldArt-slide {
+    width: auto;
+}
+
+.worldArt_slide_box .worldArt-slide img{
+    width: auto;
+    height: 100%;
+}
+
+@media (max-width:990px){
+    .poster{
+        width: 80%;
+    }
+
+}
+
+@media (max-width:768px){
+    .poster{
+        width: 80%;
+    }
+}
+
+@media (max-width:576px){
+    
+    .swiper-slide{
+        flex-direction: column;
+    }
+    
+    .book_img img{
+        width: 100%;
+    }
+
+    .books .info_txt{
+        width: 100%;
+    }
+
+    .poster{
+        width: 100%;
+        padding: 0;
+    }
+
+    .content{
+        flex-direction:column ;
+    }
+
+}

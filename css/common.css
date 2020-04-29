@@ -1,0 +1,81 @@
+::selection {background-color: #000; color:#fff;}
+html {overflow-y: scroll !important;}
+
+
+/* header */
+header {width:100%; border-bottom:1px solid rgba(255,255,255,0.4); position: fixed; left:0; top:0; z-index:10; transition:background-color 0.4s;}
+.header_inner {display:flex; justify-content:space-between; align-items:center; width:96%; max-width:1280px; height:110px; margin:0 auto; position: relative;}
+.header_inner h1 a {display:block; width:170px; height:79px; text-indent:-9999px; background: url('../img/logo_w.png') no-repeat; background-size: contain; transition:background 0.4s;}
+
+#gnb {width:50%;}
+#gnb ul {display:flex; justify-content: space-between;}
+#gnb ul li a {display:block; color:#fff; line-height:110px; letter-spacing:-1px; font-weight:700; font-size:22px; transition: color 0.3s;}
+#gnb ul li a:hover {color:#8cc63f;}
+
+/* mobile m_menu_btn, m_gnb */
+.m_menu_btn, #m_gnb {display:none;}
+.m_menu_btn {position:absolute; right:0; top:50%; transform:translateY(-50%); cursor: pointer;}
+.m_menu_btn span {display:block; width:40px; height:1px; margin:10px 0; background-color: #fff; transition: 0.4s;}
+.m_menu_btn.change .bar1 {transform: rotate(-405deg) translate(-3px, 12px);}
+.m_menu_btn.change .bar2 {opacity:0;}
+.m_menu_btn.change .bar3 {transform: rotate(405deg) translate(-3px, -13px);}
+
+#m_gnb {position:fixed; left:0; top:90px; width:100%; padding:40px 0; background-color: rgba(255,255,255,0.9); border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+#m_gnb a {display:block; text-align:center; line-height:2.1; color:#000; font-weight:900; font-size:22px; letter-spacing: -1px;}
+#m_gnb a:hover {text-decoration:underline;}
+
+
+/* header white 활성화 */
+header.white {background-color: rgba(255,255,255,0.9); box-shadow: 0 0 15px rgba(0,0,0,0.2);}
+header.white h1 a {background-image: url('../img/logo_b.png');}
+header.white #gnb ul li a {color:#333;}
+header.white #gnb ul li a:hover {color:#8cc63f;}
+header.white .m_menu_btn span {background-color:#000;}
+
+/* footer */
+footer {background-color: #121212; border-top: 1px solid #333;}
+.footer_inner {width:96%; max-width:1280px; padding:50px 0; margin:0 auto; display:flex; justify-content: space-between;}
+.footer_inner address,
+.footer_inner p {display:block; font-size:12px; color:#888; line-height:1.5;}
+.footer_inner .copyright {margin-top:25px;}
+.f_utill {display:flex;}
+.f_utill .sns {display:flex; margin:5px 20px 0 0;}
+.f_utill .sns li a {display:block; width:23px; height:23px; text-indent: -9999px; opacity:0.4; background-size: contain; background-repeat: no-repeat;}
+.f_utill .sns li.fb a {background-image:url('../img/icon-fb.png');}
+.f_utill .sns li.insta {margin:0 20px 0 10px;}
+.f_utill .sns li.insta a {background-image:url('../img/icon-insta.png');}
+.f_utill .sns li.naver a {background-image:url('../img/icon-naver.png');}
+.f_utill .family .btn {display:block; width:126px; line-height:30px; text-align:center; border:1px solid #555; color:#888; font-size:12px; font-weight:300;}
+
+
+/* main */
+.inner {width:90%; max-width:1280px; margin:0 auto; padding:50px 0;}
+.title {margin-bottom: 50px; text-align:center; word-break:keep-all;}
+.title h4 {font-size:40px; font-weight:100; color:#1e1e1e; letter-spacing: -0.05em;}
+.title h4 strong {font-size:40px; font-weight:900; color:#1e1e1e;}
+.title.big {padding:70px 0; transition:.4s; margin-bottom:0;}
+.title.big h3 {font-size:70px; font-weight:400; font-style: italic; padding-bottom:30px; color:#1e1e1e; position:relative; transition:.4s; letter-spacing: -3px;}
+.title.big h3::before {content:""; display:block; width:70px; height:2px; background:#1e1e1e; position:absolute; left:50%; bottom:0; transform: translateX(-50%);}
+
+
+@media (max-width:1200px){
+    .title.big h3 {font-size:70px;}
+}
+@media (max-width:990px){
+    .header_inner {justify-content: center; height:90px;}
+    .header_inner h1 a {height:69px;}
+    #gnb, .user {display:none;}
+    .m_menu_btn {display:block;}
+}
+@media (max-width:768px){
+    .f_utill .family {display:none;}
+}
+@media (max-width:576px){
+    .footer_inner {flex-direction:column-reverse; transition: 0.4s;}
+    .f_utill {margin-bottom:10px;}
+    .title.big h3 {font-size:50px;}
+}
+
+
+
+
